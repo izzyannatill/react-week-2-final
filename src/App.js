@@ -1,26 +1,16 @@
-import React from 'react'
-import logo from './logo.svg';
-import './App.css';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+import Weather from "./Weather";
+
+root.render(
+  <StrictMode>
+    <div>
+      <h1>Weather App</h1>
+      <Weather />
     </div>
-  );
-}
-
-export default App;
+  </StrictMode>
+);
